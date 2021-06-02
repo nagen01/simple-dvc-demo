@@ -26,3 +26,27 @@ dvc add data_given/winequality.csv
 git add .
 
 git commit -m 'first commit' 
+
+
+tox commands:
+'''bash
+tox
+
+for rebuild
+tox -r
+'''
+
+pytest command
+''bash
+pytest -v
+
+setup command
+'''bash
+pip install -e .
+'''
+
+build your own package command
+'''bash
+python setup.py sdist bdist_wheel
+'''
+
