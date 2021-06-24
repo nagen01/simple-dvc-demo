@@ -63,8 +63,8 @@ def train_and_evaluate(config_path):
 
         (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
         
-        mlflow.log_params("alpha", alpha)
-        mlflow.log_params("l1_ratio", l1_ratio)
+        mlflow.log_param("alpha", alpha)
+        mlflow.log_param("l1_ratio", l1_ratio)
 
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("mae", mae)
@@ -80,7 +80,7 @@ def train_and_evaluate(config_path):
             )
         else:
             mlflow.sklearn.log_model(lr, "model")
-            
+
         
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
