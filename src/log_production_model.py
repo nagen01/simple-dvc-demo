@@ -40,7 +40,8 @@ def log_production_model(config_path):
             )
     loaded_model = mlflow.pyfunc.load_model(logged_model)
     model_path = config["webapp_model_dir"]
-    joblib.dump(logged_model, model_path)
+    print(type(loaded_model))
+    joblib.dump(loaded_model, model_path)
 
 
 if __name__ == '__main__':
